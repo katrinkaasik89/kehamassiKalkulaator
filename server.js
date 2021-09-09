@@ -14,16 +14,16 @@ app.post('/', (req, res)=>{
     let pikkus=Number(req.body.pikkus);
 
     let result=kg/pikkus;
-
-    res.send
+    
+    
     if (result < 19) {
-        result = "alakaaluline";
+        res.send('alakaaluline');
       } else if (result < 24,9) {
-        result = "normaalkaal";
+        res.send('normaalkaal');
     } else if (result < 29,9) {
-        result = "ylekaal";
+        res.send('ylekaal');
       } else {
-        result = "rasvumine";
+        res.send('rasvumine');
       }
     (`${kg}/${pikkus}=${result}`);
 
